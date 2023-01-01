@@ -1,4 +1,4 @@
-import { style } from '@mui/system'
+
 import React from 'react'
 import {FaGithub , FaLinkedin , FaInstagram} from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
@@ -56,13 +56,14 @@ const SocialLinks = () => {
     <ul>
 
          {links.map((link)=>
-            <li key={link.id} className={'flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500'+ " " + link.style}>
+            <li key={link.id} className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500 ${link.style}`}>
             <a 
             href={link.href} 
-            className='text-white flex justify-between items-center w-full'
+            className='text-white flex justify-between items-center w-full' rel="noreferrer"
             target="_blank">
             {link.child}
             </a>
+
         </li>
              )}
 
